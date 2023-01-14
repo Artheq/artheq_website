@@ -7,7 +7,8 @@ export const WhoContainer = styled.div`
     
     @media screen and (max-width: 768px) {
     padding: 100px 0;
-    height:600px;
+    height:1000px;
+    display:grid;
     }
 `
 export const WhoTextBox = styled.div`
