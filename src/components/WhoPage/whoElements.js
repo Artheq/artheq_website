@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const WhoContainer = styled.div`
     width:100%;
-    background:#f9f9f9;
-
+    background:red;
     height:500px;
     display:flex;
     
@@ -13,7 +12,7 @@ export const WhoContainer = styled.div`
     display:grid;
     align-items:center;
     align-content:center;
-    grid-auto-columns: minmax(auto, 1fr);
+    grid-template-columns:1fr;
     padding:20px;
     }
 `
