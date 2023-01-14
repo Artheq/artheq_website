@@ -9,6 +9,7 @@ export const WhoContainer = styled.div`
     padding: 100px 0;
     height:1000px;
     display:grid;
+    padding:20px;
     }
 `
 export const WhoTextBox = styled.div`
