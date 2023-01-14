@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WhoContainer = styled.div`
-    background:#f9f9f9;
+    background:red;
     height:500px;
     display:flex;
     
