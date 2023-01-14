@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WhoContainer = styled.div`
-    background:red;
+    background:#f9f9f9;
     height:500px;
     display:flex;
     
@@ -9,6 +9,7 @@ export const WhoContainer = styled.div`
     padding: 100px 0;
     height:1000px;
     display:grid;
+    grid-auto-columns: minmax(auto, 1fr);
     padding:20px;
     }
 `
