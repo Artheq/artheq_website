@@ -6,7 +6,6 @@ export const WhoContainer = styled.div`
     display:flex;
     
     @media screen and (max-width: 768px) {
-    padding: 100px 0;
     height:1000px;
     display:grid;
     grid-auto-columns: minmax(auto, 1fr);
