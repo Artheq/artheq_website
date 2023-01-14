@@ -24,15 +24,30 @@ export const WhoTextBox = styled.div`
 
 export const WhoHeading = styled.h1`
     font-size:3em;
+
+    @media screen and (max-width: 768px) {
+        font-size:3em;
+
+    }
 `
 
 export const WhoP = styled.p`
     font-size:1.2em;
     padding-top:10px;
+
+    @media screen and (max-width: 768px) {
+        font-size:1em;
+
+    }
 `
 export const WhoP1 = styled.p`
     font-size:1.2em;
     padding-top:25px;
+
+    @media screen and (max-width: 768px) {
+        font-size:1em;
+
+    }
 `
 
 export const WhoImgContainer = styled.div`
