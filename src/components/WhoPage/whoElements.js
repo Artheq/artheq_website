@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const WhoContainer = styled.div`
-    background:red;
+    background:#f9f9f9;
     height:500px;
     display:flex;
     
     @media screen and (max-width: 768px) {
     height:1000px;
     display:grid;
+    align-items:center;
+    align-content:center;
     grid-auto-columns: minmax(auto, 1fr);
     padding:20px;
     }
