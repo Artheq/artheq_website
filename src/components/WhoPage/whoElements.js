@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const WhoContainer = styled.div`
-    padding:120px;
+    margin-top:-100px;
+    padding:100px;
+    padding-bottom:150px;
     width:100%;
     background:#f9f9f9;
     height:700px;

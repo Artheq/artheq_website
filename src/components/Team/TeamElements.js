@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TeamContainer = styled.div`
-    background-color:#f9f9f9;
+    background-color:#E4F1FF;
     display:grid;
 `
 export const TitleContainer = styled.div`
