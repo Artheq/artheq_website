@@ -52,7 +52,8 @@ export const WhoP1 = styled.p`
 
 export const WhoImgContainer = styled.div`
     flex:1;
-    display:flex;
+    display:grid;
+    padding-top:20px;
     align-content:center;
     justify-content:center;
     align-items:center;
