@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const WhoContainer = styled.div`
     width:100%;
-    background:red;
-    height:500px;
+    background:#f9f9f9;
+    height:700px;
     display:flex;
     
     @media screen and (max-width: 768px) {
@@ -17,6 +17,7 @@ export const WhoContainer = styled.div`
     }
 `
 export const WhoTextBox = styled.div`
+    margin-top:200px;
     padding:50px;
     display:grid;
     align-content:center;
@@ -53,6 +54,7 @@ export const WhoP1 = styled.p`
 `
 
 export const WhoImgContainer = styled.div`
+    margin-top:200px;
     flex:1;
     display:grid;
     padding-top:20px;
