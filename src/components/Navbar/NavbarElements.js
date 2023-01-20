@@ -2,7 +2,7 @@ import styled from "styled-components"
 import {Link as LinkR} from 'react-router-dom';
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? '#f9f9f9' : 'red')};
+    background: ${({scrollNav}) => (scrollNav ? '#f9f9f9' : '#f9f9f9')};
     height: 75px;
     margin-top: -80px;
     display:flex;
