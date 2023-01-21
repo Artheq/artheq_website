@@ -1,11 +1,12 @@
 import React from 'react'
 import { TeamContainer, OurTeam, TitleContainer, MemberRow, MemberTile, MemberName, MemberImg, MemberDes } from './TeamElements'
-import Icon1 from '../../images/serhat.jpeg'
+import Serhat from '../../images/serhat.jpeg'
 import Oguz from '../../images/Oguz.jpeg'
 import Ozkan from '../../images/Ozkan.jpeg'
 import Curt from '../../images/Curt.jpeg'
 import Sudesh from '../../images/Sudesh.jpeg'
 import Maneesh from '../../images/Maneesh.jpeg'
+import Sudhir from '../../images/Sudhir.jpeg'
 
 
 const Team = () => {
@@ -26,7 +27,7 @@ const Team = () => {
                 <MemberDes>Co-Founder and Chief Technology Officer (CTO). Oguz has extensive background in AI/ML, cloud techologies, back-end, and front-end applications.</MemberDes>
             </MemberTile>
             <MemberTile>
-                <MemberImg src={Icon1}></MemberImg>
+                <MemberImg src={Sudhir}></MemberImg>
                 <MemberName>Sudhir Sharma</MemberName>
                 <MemberDes>Co-Founder and Chief Strategy officer. Sudhir has an extensive body of experience, including in start-ups.</MemberDes>
             </MemberTile>
@@ -38,7 +39,7 @@ const Team = () => {
         </MemberRow>
         <MemberRow>
             <MemberTile>
-                <MemberImg src={Icon1}></MemberImg>
+                <MemberImg src={Serhat}></MemberImg>
                 <MemberName>Serhat Cingilli</MemberName>
                 <MemberDes>Founding team member and Senior design officer.</MemberDes>
             </MemberTile>
