@@ -3,6 +3,8 @@ import { TeamContainer, OurTeam, TitleContainer, MemberRow, MemberTile, MemberNa
 import Icon1 from '../../images/serhat.jpeg'
 import Oguz from '../../images/Oguz.jpeg'
 import Ozkan from '../../images/Ozkan.jpeg'
+import Curt from '../../images/Curt.jpeg'
+import Sudesh from '../../images/Sudesh.jpeg'
 
 
 const Team = () => {
@@ -35,12 +37,12 @@ const Team = () => {
                 <MemberDes>Founding team member and Senior design officer.</MemberDes>
             </MemberTile>
             <MemberTile>
-                <MemberImg src={Icon1}></MemberImg>
+                <MemberImg src={Curt}></MemberImg>
                 <MemberName>Curt Giltsrap</MemberName>
                 <MemberDes>Founding team member and Chief language officer. Curt has extensive experience in modeling human communication.</MemberDes>
             </MemberTile>
             <MemberTile>
-                <MemberImg src={Icon1}></MemberImg>
+                <MemberImg src={Sudesh}></MemberImg>
                 <MemberName>Sudesh Mujumdar</MemberName>
                 <MemberDes>Founding team member and Chief analytics & finance officer. Sudesh comes extensive background in creating indexes and benchmarks.</MemberDes>
             </MemberTile>
