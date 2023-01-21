@@ -1,6 +1,7 @@
 import React from 'react'
 import { TeamContainer, OurTeam, TitleContainer, MemberRow, MemberTile, MemberName, MemberImg, MemberDes } from './TeamElements'
 import Icon1 from '../../images/serhat.jpeg'
+import Oguz from '../../images/Oguz.jpeg'
 
 
 const Team = () => {
@@ -11,7 +12,7 @@ const Team = () => {
         </TitleContainer>
         <MemberRow>
             <MemberTile>
-                <MemberImg src={Icon1}></MemberImg>
+                <MemberImg src={Oguz}></MemberImg>
                 <MemberName>Oguz Akkas</MemberName>
                 <MemberDes>Co-Founder and Chief Operating officer and Product Manager. Oguz has extensive background in AI and ML.</MemberDes>
             </MemberTile>
