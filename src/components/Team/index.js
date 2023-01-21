@@ -2,6 +2,7 @@ import React from 'react'
 import { TeamContainer, OurTeam, TitleContainer, MemberRow, MemberTile, MemberName, MemberImg, MemberDes } from './TeamElements'
 import Icon1 from '../../images/serhat.jpeg'
 import Oguz from '../../images/Oguz.jpeg'
+import Ozkan from '../../images/Ozkan.jpeg'
 
 
 const Team = () => {
@@ -22,7 +23,7 @@ const Team = () => {
                 <MemberDes>Co-Founder and Chief Strategy officer. Sudhir has an extensive body of experience, including in start-ups.</MemberDes>
             </MemberTile>
             <MemberTile>
-                <MemberImg src={Icon1}></MemberImg>
+                <MemberImg src={Ozkan}></MemberImg>
                 <MemberName>Ozkan Cankya</MemberName>
                 <MemberDes>Founding team member and Chief Technical officer with extensive knowledge of modeling technology platforms.</MemberDes>
             </MemberTile>
