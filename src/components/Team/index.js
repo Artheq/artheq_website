@@ -5,6 +5,7 @@ import Oguz from '../../images/Oguz.jpeg'
 import Ozkan from '../../images/Ozkan.jpeg'
 import Curt from '../../images/Curt.jpeg'
 import Sudesh from '../../images/Sudesh.jpeg'
+import Maneesh from '../../images/Maneesh.jpeg'
 
 
 const Team = () => {
@@ -14,10 +15,15 @@ const Team = () => {
             <OurTeam>Our Team</OurTeam>
         </TitleContainer>
         <MemberRow>
+        <MemberTile>
+                <MemberImg src={Maneesh}></MemberImg>
+                <MemberName>Maneesh Sharma</MemberName>
+                <MemberDes>Co-Founder and Chief Executive Officer  (CEO). Maneesh has extensive background in business and management.</MemberDes>
+            </MemberTile>
             <MemberTile>
                 <MemberImg src={Oguz}></MemberImg>
                 <MemberName>Oguz Akkas</MemberName>
-                <MemberDes>Co-Founder and Chief Operating officer and Product Manager. Oguz has extensive background in AI and ML.</MemberDes>
+                <MemberDes>Co-Founder and Chief Technology Officer (CTO). Oguz has extensive background in AI/ML, cloud techologies, back-end, and front-end applications.</MemberDes>
             </MemberTile>
             <MemberTile>
                 <MemberImg src={Icon1}></MemberImg>
