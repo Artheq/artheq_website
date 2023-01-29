@@ -1,7 +1,7 @@
 
 export const homeObjOne = {
     id: 'explain',
-    lightBg:true,
+    lightBg:false,
     lightText:false,
     topLine: "EXTRAORDINARY COMMUNICATION",
     headline: 'Effective Communication Maximizes Human Potential',
@@ -34,7 +34,7 @@ export const homeObjTwo = {
 
 export const homeObjThree = {
     id: 'wwd',
-    lightBg:true,
+    lightBg:false,
     lightText:false,
     topLine: "ENHANCE ACEDEMIC EXPERIENCE",
     headline: 'Generate objective measures of learning outcomes',
