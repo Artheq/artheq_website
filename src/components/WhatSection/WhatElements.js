@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WhatContainer = styled.div`
     display: row;
-    height:1600px;
+    height:800px;
     
 
 
@@ -10,15 +10,16 @@ export const WhatContainer = styled.div`
 
 export const BlueSection = styled.div`
     background-color: #024A99;
-    padding-right:550px;
-    padding-left:550px;
-    height:1100px;
+    padding-right:600px;
+    padding-left:600px;
+    height:800px;
     display:grid;
     justify-content:center;
     align-content:center;
 `
 
 export const BlueHeader = styled.h1`
+    padding-top:170px;
     font-size:61px;
     color:white;
     text-align:center;
@@ -27,15 +28,8 @@ export const BlueHeader = styled.h1`
 export const BlueSubheader = styled.p`
     font-size:24px;
     color:white;
-    padding-top:50px;
+    padding-top:30px;
     text-align:center;
-    padding-bottom:200px;
+    padding-bottom: 100px;
 `
 
-
-
-
-export const WhiteSection = styled.div`
-    background-color: white;
-    height: 500px;
-`

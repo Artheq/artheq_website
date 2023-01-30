@@ -68,5 +68,6 @@ export const MemberName = styled.h2`
 
 export const MemberDes = styled.p`
     font-size: 1rem;
+    
     text-align:center;
 `

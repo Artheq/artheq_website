@@ -1,12 +1,12 @@
 import React from 'react'
 import { MiniContainer, MiniColumn, Header, Body } from './MiniElements'
 
-const MiniSection = () => {
+const MiniSection = ({mainHeader, topHeader}) => {
   return (
     <MiniContainer>
         <MiniColumn>
-            <Body>LEADERSHIP, EDUCATION, PERSONAL GROWTH</Body>
-            <Header>Services: Develop You With ARTHEQ </Header>
+            <Body>{topHeader}</Body>
+            <Header>{mainHeader}</Header>
         </MiniColumn>
     </MiniContainer>
   )

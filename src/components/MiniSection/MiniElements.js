@@ -22,13 +22,13 @@ export const MiniColumn = styled.div`
 `
 
 export const Header = styled.h1`
-    color:#0E74E6;
+    color:black;
     font-size:40px;
     text-align:center;
   
 `
 export const Body = styled.p`
-    color:black;
+    color:#0E74E6;
     font-size:18px;
     text-align:center;
 `
