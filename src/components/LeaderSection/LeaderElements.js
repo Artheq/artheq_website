@@ -65,6 +65,6 @@ export const List = styled.div`
 export const Li = styled.p`
     max-width:600px;
     padding-bottom:20px;
-    font-size:20px;
+    font-size:18.5px;
 `
 

@@ -4,7 +4,7 @@ import Leader from '../components/LeaderSection'
 import MiniSection from '../components/MiniSection'
 import { homePageMini, wwdPageMini } from '../components/MiniSection/Data'
 import Navbar from '../components/Navbar'
-import Services from '../components/services'
+import ServicesMenus from '../components/ServicesMenus'
 import WhatSection from '../components/WhatSection'
 
 const Wwd = () => {
@@ -12,6 +12,7 @@ const Wwd = () => {
     <div>
         <Navbar />
         <WhatSection/>
+        <ServicesMenus/>
         <MiniSection {...wwdPageMini}/>
         <Leader/>
         <Footer/>
