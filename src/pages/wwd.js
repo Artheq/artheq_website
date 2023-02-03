@@ -3,9 +3,8 @@ import Footer from '../components/Footer'
 import HighEd from '../components/HighEd'
 import Leader from '../components/LeaderSection'
 import MiniSection from '../components/MiniSection'
-import { homePageMini, wwdPageMini, wwdPageHi } from '../components/MiniSection/Data'
+import { wwdPageMini, wwdPageHi } from '../components/MiniSection/Data'
 import Navbar from '../components/Navbar'
-import ServicesMenus from '../components/ServicesMenus'
 import WhatSection from '../components/WhatSection'
 
 const Wwd = () => {

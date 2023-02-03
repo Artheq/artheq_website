@@ -40,7 +40,7 @@ const HighEd = () => {
                
                 <Lr>
                 <Ln>5</Ln>
-                <Li> Enhance the academic brand of the institution</Li>
+                <Li> Enhance the academic brand of the institution and student renetion</Li>
                 </Lr>
                 </List>
                 

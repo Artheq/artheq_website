@@ -1,7 +1,7 @@
 import React from 'react'
-import { WhatContainer, BlueSection, WhiteSection, BlueHeader, BlueSubheader, BlueImg } from './WhatElements'
+import { WhatContainer, BlueSection, BlueHeader, BlueSubheader } from './WhatElements'
 
-const index = ({}) => {
+const index = () => {
   return (
     <WhatContainer>
         <BlueSection>
@@ -13,5 +13,4 @@ const index = ({}) => {
     </WhatContainer>
   )
 }
-
 export default index

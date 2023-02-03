@@ -47,7 +47,7 @@ export const HighEdChart = styled.div`
 export const ChartHeading = styled.div`
     height:100px;
     background-color:#0070EC;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     display:flex;
     align-items:center;
@@ -70,9 +70,9 @@ export const List = styled.div`
 `
 
 export const Li = styled.p`
-    padding-bottom:20px;
     font-size:1rem;
     color: #2F2F2F;
+    text-align:left;
     font-family:"Encode Sans Expanded";
 `
 export const Ln = styled.p`
@@ -80,9 +80,9 @@ export const Ln = styled.p`
     color:#0070EC;
     font-size:1.5rem;
     padding-right:20px;
-    padding-bottom:10px;
 `
 export const Lr = styled.div`
     display:flex;
-    justify-content:center;
+    padding-bottom:20px;
+    justify-content:space-between;
 `
