@@ -10,26 +10,38 @@ export const WhatContainer = styled.div`
 
 export const BlueSection = styled.div`
     background-color: #024A99;
-    padding-right:600px;
-    padding-left:600px;
     height:800px;
     display:grid;
     justify-content:center;
     align-content:center;
+
+    @media screen and (max-width: 900px) {
+    }
 `
 
 export const BlueHeader = styled.h1`
     padding-top:170px;
-    font-size:61px;
+    max-width:700px;
+    font-size:3rem;
     color:white;
     text-align:center;
+
+    @media screen and (max-width: 728px) {
+        font-size:2rem;
+    }
 `
 
 export const BlueSubheader = styled.p`
-    font-size:24px;
+    font-size:1.5rem;
+    max-width:700px;
     color:white;
     padding-top:30px;
     text-align:center;
     padding-bottom: 100px;
+
+    @media screen and (max-width: 728px) {
+        font-size:1.5rem;
+        padding:10px;
+    }
 `
 

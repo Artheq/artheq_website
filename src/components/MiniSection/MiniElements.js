@@ -8,7 +8,7 @@ export const MiniContainer = styled.div`
     justify-content:center;
 
     @media screen and (max-width: 768px) {
-        height:600px;
+        height:650px;
         
     }
 
@@ -19,16 +19,24 @@ export const MiniColumn = styled.div`
     display:column;
     align-content:center;
     justify-content:center;
+   
 `
 
 export const Header = styled.h1`
     color:black;
-    font-size:40px;
-    text-align:center;
+    font-size:2.5rem;
+
+    @media screen and (max-width: 768px) {
+        text-align:center;        
+    }
   
 `
 export const Body = styled.p`
     color:#0E74E6;
-    font-size:18px;
-    text-align:center;
+    font-size:1.2rem;
+    text-align: ${({tAlign}) => (tAlign ? 'left' : 'right')};;
+
+    @media screen and (max-width: 768px) {
+        text-align:center;        
+    }
 `

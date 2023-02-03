@@ -20,7 +20,6 @@ const Leader = () => {
                 <Li> Compare “before” and “after” scores to continue to enhance the learning experience. </Li>
                 <Li> A detailed portrait of each participant’s communication style before the training even starts, including easily understood and detailed communication analytics and specific recommendations on focus areas, resulting in a much richer learning experience.</Li>
                 <Li> Ability to choose a pre-determined length to deploy ArthEQ’s LEAD platform for “before and after measures”</Li>
-                <Li>_____________</Li>
             </List>
         </ListBlock>
 
