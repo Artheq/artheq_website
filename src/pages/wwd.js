@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import GetStarted from '../components/GetStarted'
 import HighEd from '../components/HighEd'
 import Leader from '../components/LeaderSection'
 import MiniSection from '../components/MiniSection'
@@ -16,6 +17,7 @@ const Wwd = () => {
         <Leader/>
         <MiniSection {...wwdPageHi}/>
         <HighEd/>
+        <GetStarted/>
         <Footer/>
     </div>
   )

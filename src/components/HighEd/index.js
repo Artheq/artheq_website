@@ -45,9 +45,11 @@ const HighEd = () => {
                 </List>
                 
                 
+                
             </HighEdChart>
+
         </HighEdChartDiv>
-        
+
 
     </HighEdComponents>
   )

@@ -68,8 +68,17 @@ export const List = styled.div`
 
 export const Li = styled.p`
     max-width:485px;
-    padding-bottom:20px;
     font-size:1.1rem;
     color: #303030;
+`
+export const Ln = styled.p`
+    font-family:'Work Sans';
+    color:#0070EC;
+    font-size:1.5rem;
+    padding-right:20px;
+`
+export const Lr = styled.div`
+    display:flex;
+    padding-bottom:35px;
 `
 

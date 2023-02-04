@@ -26,18 +26,17 @@ export const HighPC = styled.div`
 
 export const HighEdChartDiv = styled.div`
     padding-top:0px;
-    margin-top:100px;
     height:700px;
     display:flex;
-    background-color:#F5F5F5;
-    align-items:center;
+    background-color:#f9f9f9;
     justify-content:center;
     
 `
 
 export const HighEdChart = styled.div`
+    margin-top:50px;
     background-color:white;
-    height: 650px;
+    height: 550px;
     width:600px;
     border-radius:20px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -73,6 +72,7 @@ export const Li = styled.p`
     font-size:1rem;
     color: #2F2F2F;
     text-align:left;
+    width:500px;
     font-family:"Encode Sans Expanded";
 `
 export const Ln = styled.p`
@@ -83,6 +83,9 @@ export const Ln = styled.p`
 `
 export const Lr = styled.div`
     display:flex;
-    padding-bottom:20px;
+    padding-bottom:35px;
     justify-content:space-between;
 `
+
+
+
