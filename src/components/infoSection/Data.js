@@ -1,7 +1,7 @@
 
 export const homeObjOne = {
     id: 'explain',
-    lightBg:false,
+    lightBg:true,
     lightText:false,
     topLine: "EXTRAORDINARY COMMUNICATION",
     headline: 'Effective Communication Maximizes Human Potential',
@@ -18,7 +18,7 @@ export const homeObjOne = {
 
 export const homeObjTwo = {
     id: 'wwd',
-    lightBg:true,
+    lightBg:false,
     lightText:false,
     topLine: "LEAD COMMUNICATION",
     headline: "Develop impactful leaders with ArthEQ’s LEAD technology",
@@ -34,7 +34,7 @@ export const homeObjTwo = {
 
 export const homeObjThree = {
     id: 'wwd',
-    lightBg:false,
+    lightBg:true,
     lightText:false,
     topLine: "ENHANCE ACEDEMIC EXPERIENCE",
     headline: 'Generate objective measures of learning outcomes',
@@ -50,7 +50,7 @@ export const homeObjThree = {
 
 export const homeObjFour = {
     id: 'wwd',
-    lightBg:true,
+    lightBg:false,
     lightText:false,
     topLine: "EXPLORE YOURSELF",
     headline: "enhance self-awareness, communication effectiveness and personal brand",

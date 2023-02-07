@@ -24,12 +24,13 @@ export const WhoTextBox = styled.div`
     padding:50px;
     display:grid;
     align-content:center;
-    justify-content:center;
+    justify-content:left;
     flex:1;
 `
 
 export const WhoHeading = styled.h1`
     font-size:3em;
+    text-align: left;
 
     @media screen and (max-width: 768px) {
         font-size:3em;
@@ -40,6 +41,8 @@ export const WhoHeading = styled.h1`
 export const WhoP = styled.p`
     font-size:1.2em;
     padding-top:10px;
+    text-align:left;
+    max-width:570px;
 
     @media screen and (max-width: 768px) {
         font-size:1em;
@@ -49,6 +52,9 @@ export const WhoP = styled.p`
 export const WhoP1 = styled.p`
     font-size:1.2em;
     padding-top:25px;
+    text-align: left;
+    max-width:570px;
+
 
     @media screen and (max-width: 768px) {
         font-size:1em;
@@ -62,7 +68,7 @@ export const WhoImgContainer = styled.div`
     display:grid;
     padding-top:20px;
     align-content:center;
-    justify-content:center;
+    justify-content:right;
     align-items:center;
 `
 

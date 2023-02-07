@@ -33,13 +33,13 @@ const Navbar = ({toggle}) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/who">About</NavLinks>
+              <NavLinks to="/who">About ARTHEQ</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="/wwd">What We Do</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks to="/industry">Industries Served</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

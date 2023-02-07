@@ -80,8 +80,8 @@ export const NavLinks = styled(LinkR)`
     height: 100%;
     cursor: pointer;
 
-    &.active {
-        border-bottom: 3px solid red;
+    &:hover {
+        border-bottom: 3px solid #0E74E6;
     }
 
 `
