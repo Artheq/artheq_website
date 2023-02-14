@@ -4,7 +4,7 @@ import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 
 export const GetStartedContainer = styled.div`
     height:250px;
-    background-color:#f3f3f3;
+    background-color:#f5f5f5;
     display:flex;
     align-items:center;
 `
@@ -18,7 +18,7 @@ justify-content:end;
 export const Heading = styled.h1`
     color:#0E74E6;
     font-size:3.2rem;
-    font-family:"Karla";
+    font-family:"Roboto";
 `
 
 export const SubHeading = styled.p`
@@ -27,10 +27,10 @@ export const SubHeading = styled.p`
 `
 
 export const BtnWrap = styled.div`
-    border-radius:15px;
+    border-radius:6px;
     background:#0E74E6;
     white-space: nowrap;
-    padding: 13px 22px;
+    padding: 13px 30px;
     color: white;
     outline: none;
     border:none;

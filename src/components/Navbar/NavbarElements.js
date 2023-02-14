@@ -21,16 +21,16 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 70px;
     z-index: 1;
     width: 100%;
     padding: 0 0px; 
-    max-width: 1300px;
+    max-width: 1450px;
 `;
 
 export const NavLogo = styled(LinkR)`
-    font-family:"Work Sans", sans-serif;
+    font-family:"Roboto", sans-serif;
     color: black;
     justify-self:flex-start;
     font-size: 1.8rem;
@@ -75,7 +75,7 @@ export const NavLinks = styled(LinkR)`
     display: flex;
     align-items:center;
     text-decoration:none;
-    font-size:18px;
+    font-size:16px;
     padding: 0 1.5rem;
     height: 100%;
     cursor: pointer;
@@ -89,6 +89,7 @@ export const NavLinks = styled(LinkR)`
 export const NavBtn = styled.nav`
     display:flex;
     align-items:center;
+    margin-left:30px;
 
     @media screen and (max-width: 768px){
         display:none;
@@ -96,14 +97,15 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(LinkR)`
-    border-radius:50px;
+    border-radius:5px;
     background:#0E74E6;
     white-space: nowrap;
-    padding: 10px 22px;
+    padding: 13px 28px;
     color: white;
     font-size: 17px;
     outline: none;
     border:none;
+    font-family:"Heebo";
     font-weight:bold;
     letter-spacing:0.5px;
     cursor: pointer;

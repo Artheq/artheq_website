@@ -73,7 +73,7 @@ export const Li = styled.p`
     color: #2F2F2F;
     text-align:left;
     width:500px;
-    font-family:"Encode Sans Expanded";
+    font-family:"Lato";
 `
 export const Ln = styled.p`
     font-family:'Work Sans';

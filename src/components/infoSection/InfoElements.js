@@ -14,7 +14,7 @@ export const InfoWrapper = styled.div`
     z-index: 1;
     height: 600px;
     width:100%;
-    max-width:1100px;
+    max-width:1600px;
     margin-right:auto;
     margin-left:auto;
     padding: 0 24px;
@@ -43,7 +43,7 @@ export const Column2 = styled.div`
 `
 
 export const TextWrapper = styled.div`
-    max-width: 540px;
+    max-width: 600px;
     padding-top: 0;
     padding-bottom:60px;
 `
@@ -58,6 +58,8 @@ export const TopLine = styled.p`
 `
 export const Heading = styled.h1`
     margin-bottom:24px;
+    font-family:"Lato";
+    font-weight:normal;
     font-size:44px;
     line-height:1.1;
     color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
@@ -68,9 +70,9 @@ export const Heading = styled.h1`
 `
 
 export const Subtitle = styled.p`
-    max-width: 440px;
+    max-width: 500px;
     margin-bottom:35px;
-    font-size:18px;
+    font-size:17px;
     line-height:24px;
     color: ${({darkText}) => (darkText ? 'black' : 'white')};
 `
@@ -79,7 +81,7 @@ export const BtnWrap = styled.div`
     justify-content:flex-start;
 `
 export const ImgWrap = styled.div`
-    max-width: 555px;
+    max-width: 600px;
     height: 100%;
 `
 export const Img = styled.img`

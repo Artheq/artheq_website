@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MiniContainer = styled.div`
     display:flex;
-    height:200px;
+    height:40px;
     background-color:#f9f9f9;
     align-items:center;
     justify-content:center;

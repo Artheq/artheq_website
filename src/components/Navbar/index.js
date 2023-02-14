@@ -26,24 +26,28 @@ const Navbar = ({toggle}) => {
   return (
     <>
       <Nav scrollNav={scrollNav}>
+      <NavLogo to="/" onClick={toggleHome}>ARTH</NavLogo>
         <NavbarContainer>
-          <NavLogo to="/" onClick={toggleHome}>ARTHEQ</NavLogo>
+          
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/who">About ARTHEQ</NavLinks>
+              <NavLinks to="/who">About ARTH</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/wwd">What We Do</NavLinks>
+              <NavLinks to="/industry">For Industry</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/industry">Industries Served</NavLinks>
+              <NavLinks to="/highereducation">For Higher-Ed</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/individual">For Individuals</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to='/download'>Download App</NavBtnLink>
+            <NavBtnLink to='/download'>Download ARTH</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
