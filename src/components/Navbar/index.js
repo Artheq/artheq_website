@@ -1,10 +1,12 @@
 import React , {useEffect, useState} from 'react'
 import {FaBars} from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
+import DropdownAbout from '../DropdownAbout'
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks, NavBtn, NavBtnLink} from './NavbarElements'
 
 const Navbar = ({toggle}) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [openAbout, setOpenAbout] = useState(false);
 
   const changeNav = () => {
     if (window.scrollY >= 80){
@@ -23,10 +25,12 @@ const Navbar = ({toggle}) => {
     scroll.scrollToTop();
   }
 
+
+
   return (
     <>
       <Nav scrollNav={scrollNav}>
-      <NavLogo to="/" onClick={toggleHome}>ARTH</NavLogo>
+      <NavLogo to="/" onClick={toggleHome}>ARTHEQ</NavLogo>
         <NavbarContainer>
           
           <MobileIcon onClick={toggle}>
@@ -34,7 +38,10 @@ const Navbar = ({toggle}) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/who">About ARTH</NavLinks>
+              <NavLinks onClick={() => setOpenAbout((prev) => !prev)} on>About ARTH</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/why">Why ARTH</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="/industry">For Industry</NavLinks>
@@ -50,6 +57,12 @@ const Navbar = ({toggle}) => {
             <NavBtnLink to='/download'>Download ARTH</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
+        {
+          openAbout && (
+            <DropdownAbout/>
+          )
+        }
+        
       </Nav>
     </>
   )

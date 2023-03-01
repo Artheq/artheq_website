@@ -66,3 +66,50 @@ export const homeObjFour = {
     darkText: true
 }
 
+export const purposeObj1 = {
+    id: 'wwd',
+    lightBg:true,
+    lightText:false,
+    topLine: "",
+    headline: "Our Purpose",
+    description: 'Our purpose at ARTH is to unleash the power of human potential by making communication more effective.',
+    buttonLabel: '',
+    imgStart: true,
+    img: require("../../images/com.jpg"),
+    alt:"Image not loading",
+    dark: false,
+    primary: true,
+    darkText: true
+}
+
+export const purposeObj2 = {
+    id: 'wwd',
+    lightBg:true,
+    lightText:false,
+    topLine: "",
+    headline: "Our Mission",
+    description: 'Our Mission is to empower people and organizations to grow and reach their true potential.',
+    buttonLabel: '',
+    imgStart: false,
+    img: require("../../images/comm.jpg"),
+    alt:"Image not loading",
+    dark: false,
+    primary: true,
+    darkText: true
+}
+
+export const historyObj1 = {
+    id: 'wwd',
+    lightBg:true,
+    lightText:false,
+    topLine: "",
+    headline: "History of ARTH",
+    description: 'ArthEQ was founded by Maneesh Sharma in 2022. The word Arth is derived from Sanskrit and translates into “meaning or essence”. The inspiration for ArthEQ came from Maneesh’s own professional and spiritual journey where he noted how careers and personal relationships are impacted by a lack of self-awareness and tools that inform people and organizations about their “personal culture”. ArthEQ was thus founded to help people and organizations transform themselves- “By discovering yourself”',
+    buttonLabel: 'Download ARTH',
+    imgStart: false,
+    img: require("../../images/comm.jpg"),
+    alt:"Image not loading",
+    dark: false,
+    primary: true,
+    darkText: true
+}

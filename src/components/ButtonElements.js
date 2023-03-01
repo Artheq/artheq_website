@@ -21,6 +21,7 @@ export const Button = styled(Link)`
         transition: all 0.2s ease-in-out;
         background: ${({primary}) => (primary ? "#005BC1" : '#0E74E6')};
 
+
     }
 `
 

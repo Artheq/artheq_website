@@ -1,0 +1,92 @@
+.dropDownProfile {
+    position: absolute;
+    top:4.7rem;
+    right: 52.2rem;
+    width: 164px;
+    height: 120px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius: 0px;
+    background-color: #f9f9f9;
+    align-items: center;
+    padding-top: 25px;
+    display: flex;
+    padding:5px;
+    border-right: 1px solid #ECECEC;
+    border-left: 1px solid #ECECEC;
+
+}
+
+.listInstructions {
+    list-style: none;
+    width: 100%;
+    display: row;
+    justify-content: center;
+    
+}
+
+.items1 {
+    padding:3px;
+    color: black;
+
+    font-family: "heebo";
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+}
+
+.items1:hover {
+    font-family: "heebo";
+    font-size: 16px;
+    color: black;
+    background-color: #EEEEEE;
+    border-radius: 3px;
+    border: 1px solid #ECECEC;
+    width: 100%;
+}
+
+
+.items2 {
+    padding:3px;
+    font-family: "heebo";
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    color: black;
+
+    align-content: center;
+}
+
+.items2:hover {
+    font-family: "heebo";
+    font-size: 16px;
+    color: black;
+    background-color: #EEEEEE;
+    border: 1px solid #ECECEC;
+
+    border-radius: 2px;
+    width: 100%;
+}
+
+.items3 {
+    padding:3px;
+    font-family: "heebo";
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    color: black;
+
+    align-content: center;
+}
+
+.items3:hover {
+    font-family: "heebo";
+    font-size: 16px;
+    color: black;
+    background-color: #EEEEEE;
+    border: 1px solid #ECECEC;
+
+    border-radius: 2px;
+    width: 100%;
+
+}

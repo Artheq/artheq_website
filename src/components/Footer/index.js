@@ -9,19 +9,19 @@ const Footer = () => {
             <FooterLinksContainer>
                 <FooterLinksWrapper>
                     <FooterLinkItems>
-                        <FooterLinkTitle>Arth</FooterLinkTitle>
-                            <FooterLink to="/contactus">Contact Us</FooterLink>
+                        <FooterLinkTitle>Legal</FooterLinkTitle>
+                            {/* <FooterLink to="/contactus">Contact Us</FooterLink> */}
                             <FooterLink to="/privacy">Privacy Policy</FooterLink>
-                            <FooterLink to="/contactus">Terms of Service</FooterLink>
+                            <FooterLink to="/terms">Terms of Service</FooterLink>
+                            <FooterLink to="/cookies">Cookies Policy</FooterLink>
+                    </FooterLinkItems>
+                    <FooterLinkItems>
+                        <FooterLinkTitle>At Arth</FooterLinkTitle>
+                            <FooterLink to="/contactus">Contact Us</FooterLink>
+                            {/* <FooterLink to="/contactus">Privacy Policy</FooterLink>
+                            <FooterLink to="/contactus">Terms of Service</FooterLink> */}
                             <FooterLink to="/contactus">About Us</FooterLink>
                     </FooterLinkItems>
-                    {/* <FooterLinkItems>
-                        <FooterLinkTitle>Arth</FooterLinkTitle>
-                            <FooterLink to="/contactus">Contact Us</FooterLink>
-                            <FooterLink to="/contactus">Privacy Policy</FooterLink>
-                            <FooterLink to="/contactus">Terms of Service</FooterLink>
-                            <FooterLink to="/contactus">About Us</FooterLink>
-                    </FooterLinkItems> */}
                 </FooterLinksWrapper>
                 <FooterLinksWrapper>
                     {/* <FooterLinkItems> */}

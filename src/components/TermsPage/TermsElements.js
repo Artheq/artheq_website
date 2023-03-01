@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
-export const PrivacyContainer = styled.div`
+export const TermsContainer = styled.div`
     padding:50px;
     padding-top: 200px;
 `
-export const PrivacyTitle = styled.h1`
+export const TermsTitle = styled.h1`
     font-size:50px;
 `
 
-export const PrivacyCol = styled.div`
+export const TermsCol = styled.div`
     display: flex;
     flex-direction:row;
     padding-top:0px;
     
 `
 
-export const PrivacyImage = styled.img`
+export const TermsImage = styled.img`
     width:50%;
     height:50%;
 `

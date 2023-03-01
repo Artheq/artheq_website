@@ -4,7 +4,7 @@ import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 
 export const GetStartedContainer = styled.div`
     height:250px;
-    background-color:#f5f5f5;
+    background-color:#f9f9f9;
     display:flex;
     align-items:center;
 `
@@ -19,6 +19,8 @@ export const Heading = styled.h1`
     color:#0E74E6;
     font-size:3.2rem;
     font-family:"Roboto";
+    font-weight:normal;
+    
 `
 
 export const SubHeading = styled.p`

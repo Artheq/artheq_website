@@ -39,6 +39,7 @@ export const NavLogo = styled(LinkR)`
     margin-left:24px;
     text-decoration: none;
     cursor: pointer;
+
 `;
 
 export const MobileIcon = styled.div`
@@ -81,7 +82,9 @@ export const NavLinks = styled(LinkR)`
     cursor: pointer;
 
     &:hover {
-        border-bottom: 3px solid #0E74E6;
+        border-top: 6px solid #0E74E6;
+        transition: 0.3s ease-out;
+
     }
 
 `

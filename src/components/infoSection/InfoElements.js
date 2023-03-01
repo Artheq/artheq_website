@@ -55,12 +55,15 @@ export const TopLine = styled.p`
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 16px;
+    background-image: linear-gradient(43deg, #0E74E6 0%, #C850C0 20%, #0E74E6 100%);
+    background-clip: text;
+    color:transparent;
 `
 export const Heading = styled.h1`
     margin-bottom:24px;
     font-family:"Lato";
     font-weight:normal;
-    font-size:44px;
+    font-size:45px;
     line-height:1.1;
     color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
 
