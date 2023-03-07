@@ -5,13 +5,12 @@ export const HeroContainer = styled.div`
     background: black;
     display: flex;
     align-items:center;
-    padding: 0 200px;
-    height: 1200px;
+    height: 1010px;
     position:relative;
     z-index: 1;
+    justify-content:flex-end ;
 
     :before {
-        content:' ';
         position:absolute;
         top:0;
         bottom:0;
@@ -39,12 +38,15 @@ export const VideoBg = styled.img`
     height: 100%;
     -o-object-fit:cover;
     object-fit:cover;
+    object-position:0% 0%;
+
 
 `
 
 export const HeroContent = styled.div`
     z-index:3;
-    max-width: 1600px;
+    max-width: 1200px;
+    margin-right:100px;
     position:absolute;
     display:flex;
     flex-direction:column;

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import {Link as LinkR} from 'react-router-dom';
 
 export const Nav = styled.nav`
-    background: #f9f9f9;
+    background: ${({scrollNav}) => (scrollNav ? '#f9f9f9' : 'transparent')};
     height: 80px;
     margin-top:-80px;
     display:flex;
@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
 
 export const NavLogo = styled(LinkR)`
     font-family:"Roboto", sans-serif;
-    color: black;
+    color: ${({scrollNav}) => (scrollNav ? 'black' : 'white')};
     justify-self:flex-start;
     font-size: 2.1rem;
     display: flex;
@@ -75,7 +75,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkR)`
-    color: black;
+    color: ${({scrollNav}) => (scrollNav ? 'black' : 'white')};
     display: flex;
     align-items:center;
     text-decoration:none;

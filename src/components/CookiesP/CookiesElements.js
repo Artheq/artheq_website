@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CookiesContainer = styled.div`
-    height:1100px;
+    height:1500px;
     width:100%;
     display:row;
     align-items:center;

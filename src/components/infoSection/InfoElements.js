@@ -12,7 +12,7 @@ background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#f6f6f6')};
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 600px;
+    height: 1000px;
     width:100%;
     max-width:1600px;
     margin-right:auto;
@@ -33,23 +33,23 @@ export const InfoRow = styled.div`
 `
 export const Column1 = styled.div`
     margin-bottom:15px;
-    padding:0 15px;
+    padding:0 70px;
     grid-area: col1;
 `
 export const Column2 = styled.div`
     margin-bottom:15px;
-    padding:0 15px;
+    padding:0 65px;
     grid-area: col2;
 `
 
 export const TextWrapper = styled.div`
-    max-width: 600px;
+    max-width: 1000px;
     padding-top: 0;
     padding-bottom:60px;
 `
 export const TopLine = styled.p`
     color: #0E74E6;
-    font-size: 16px;
+    font-size: 20px;
     font-weight:500;
     line-height: 16px;
     letter-spacing: 1.4px;
@@ -63,7 +63,7 @@ export const Heading = styled.h1`
     margin-bottom:24px;
     font-family:"Lato";
     font-weight:normal;
-    font-size:45px;
+    font-size:55px;
     line-height:1.1;
     color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
 
@@ -73,9 +73,11 @@ export const Heading = styled.h1`
 `
 
 export const Subtitle = styled.p`
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom:35px;
-    font-size:17px;
+    font-family:"Lato";
+    font-weight:normal;
+    font-size:25px;
     line-height:24px;
     color: ${({darkText}) => (darkText ? 'black' : 'white')};
 `
@@ -84,12 +86,14 @@ export const BtnWrap = styled.div`
     justify-content:flex-start;
 `
 export const ImgWrap = styled.div`
-    max-width: 600px;
-    height: 100%;
+    max-width: 580px;
+
 `
 export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
-    border-radius:50px;
+    
+
+    border-radius:10px;
 `

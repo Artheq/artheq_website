@@ -5,7 +5,7 @@ import InfoSection from '../components/infoSection';
 import { homeObjOne, homeObjThree, homeObjTwo, homeObjFour } from '../components/infoSection/Data';
 // import MiniSection from '../components/MiniSection';
 // import { homePageMini } from '../components/MiniSection/Data';
-import Navbar from '../components/Navbar'
+import NavbarHero from '../components/NavbarHero';
 import Sidebar from '../components/Sidebar'
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
     <Sidebar isOpen={isOpen} toggle={toggle}/>
-    <Navbar toggle={toggle}/>
+    <NavbarHero toggle={toggle}/>
     <HeroSection />
     <InfoSection {...homeObjOne}/>
     {/* <MiniSection {...homePageMini}/> */}

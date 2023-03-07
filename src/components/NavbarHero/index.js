@@ -2,14 +2,14 @@ import React , {useEffect, useState} from 'react'
 import {FaBars} from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
 import DropdownAbout from '../DropdownAbout'
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks, NavBtn, NavBtnLink} from './NavbarElements'
+import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks, NavBtn, NavBtnLink} from './NHeroElements'
 
-const Navbar = ({toggle}) => {
+const NavbarHero = ({toggle}) => {
   const [scrollNav, setScrollNav] = useState(false);
   const [openAbout, setOpenAbout] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 80){
+    if (window.scrollY >= 900){
       setScrollNav(true)
     }
     else{
@@ -68,4 +68,4 @@ const Navbar = ({toggle}) => {
   )
 }
 
-export default Navbar;
+export default NavbarHero;
