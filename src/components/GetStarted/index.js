@@ -16,7 +16,7 @@ const GetStarted = () => {
         </TextContainer>
         <ButtonContainer>
         <BtnWrap>
-            <BtnTxt onMouseEnter={onHover} onMouseLeave={onHover}>Get ARTH{hover ? <ArrowForward/> : <ArrowRight/>}</BtnTxt>
+            <BtnTxt onMouseEnter={onHover} onMouseLeave={onHover}>Request Demo{hover ? <ArrowForward/> : <ArrowRight/>}</BtnTxt>
         </BtnWrap>
         </ButtonContainer>
     </GetStartedContainer>

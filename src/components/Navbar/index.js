@@ -38,23 +38,23 @@ const Navbar = ({toggle}) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks scrollNav={scrollNav} onClick={() => setOpenAbout((prev) => !prev)} on>About ARTH</NavLinks>
+            <NavLinks scrollNav={scrollNav} to='/purpose' >About ARTH</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks scrollNav={scrollNav} to="/why">Why ARTH</NavLinks>
-            </NavItem>
+            {/* <NavItem> */}
+              {/* <NavLinks scrollNav={scrollNav} to="/why">Why ARTH</NavLinks> */}
+            {/* </NavItem> */}
             <NavItem>
               <NavLinks scrollNav={scrollNav} to="/industry">For Industry</NavLinks>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLinks scrollNav={scrollNav} to="/highereducation">For Higher-Ed</NavLinks>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
-              <NavLinks scrollNav={scrollNav} to="/individual">For Individuals</NavLinks>
+              <NavLinks scrollNav={scrollNav} to="/individual">For People</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to='/download'>Download ARTH</NavBtnLink>
+            <NavBtnLink to='/download'>Request Demo</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
         {

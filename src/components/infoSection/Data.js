@@ -13,7 +13,6 @@ export const homeObjOne = {
     dark: false,
     primary: true,
     darkText: true,
-    whereTo: "/individual"
     
 }
 

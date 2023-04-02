@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-    font-family:"Roboto", sans-serif;
+    font-family:"Lato", sans-serif;
     color: ${({scrollNav}) => (scrollNav ? 'black' : 'white')};
     justify-self:flex-start;
     font-size: 2.1rem;
@@ -80,12 +80,12 @@ export const NavLinks = styled(LinkR)`
     align-items:center;
     text-decoration:none;
     font-size:1.2rem;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
     height: 100%;
     cursor: pointer;
 
     &:hover {
-        border-top: 6px solid #0E74E6;
+        border-top: 4px solid #0E74E6;
         transition: 0.3s ease-out;
 
     }

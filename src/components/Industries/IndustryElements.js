@@ -28,8 +28,7 @@ export const IndustryImgCont = styled.div`
 `
 
 export const ImgBg = styled.img`
-    width: 90%;
-    height: 75%;
+    height: 100%;
     -o-object-fit:cover;
     object-fit:cover;
     object-position:50% 0%;
@@ -47,12 +46,12 @@ export const IndustryBg = styled.div`
     justify-content:center;
 `
 export const HeroH1 = styled.h1`
-    color: black;
+    color: white;
     font-family:'Lato';
     font-weight: bold;
-    font-size: 40px;
-    text-align:left;    
-    text-shadow: #f1f1f1 1px 1px 1px;
+    font-size: 52px;
+
+ 
 
 
 
@@ -66,10 +65,10 @@ export const HeroH1 = styled.h1`
 `
 
 export const HeroP = styled.p`
-    margin-top:26px;
-    color: black;
+    margin-top:10px;
+    color: white;
     font-family:"Lato";
-    font-size: 18px;
+    font-size: 32px;
     text-align:left;
     max-width: 600px;
 
