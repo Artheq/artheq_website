@@ -16,7 +16,6 @@ const DoubleC = () => {
                 <Img2 src={img2}/> 
                 <Title>Mission</Title>
                 <Subtitle>To help people live with purpose and maximize their potential using the power of self-discovery and self-management. </Subtitle>
-
             </ColumnTwo>
         </ColumnHolder>
     </DoubleContainer>
