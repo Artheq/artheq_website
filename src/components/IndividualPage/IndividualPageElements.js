@@ -36,7 +36,7 @@ export const ImgBg = styled.img`
 export const IndividualContent = styled.div`
     border-radius: 8px;
     z-index:3;
-    max-width: 1600px;
+    max-width: 1800px;
     justify-content:center;
     position:absolute;
     height:300px;
@@ -52,7 +52,7 @@ export const IndividualH1 = styled.h1`
     color: black;
     font-family:'Lato';
     font-weight: bold;
-    font-size: 60px;
+    font-size: 78px;
     text-align:right;    
     text-shadow: #f1f1f1 1px 1px 1px;
 
@@ -68,10 +68,29 @@ export const IndividualH1 = styled.h1`
 `
 
 export const IndividualP = styled.p`
-    margin-top:46px;
+    margin-top:25px;
     color: black;
     font-family:"Lato";
-    font-size: 18px;
+    font-size: 25px;
+    text-align:right;
+    max-width: 600px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media screen and (max-width: 480px){
+        font-size: 18px;
+    }
+`
+
+export const IndividualP1 = styled.p`
+    margin-top:25px;
+    color: black;
+    font-weight:bold;
+
+    font-family:"Lato";
+    font-size: 25px;
     text-align:right;
     max-width: 600px;
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { IndividualBtnWrapper,IndividualContainer, IndividualBg, ImgBg,ArrowForward,ArrowRight, IndividualContent, IndividualH1, IndividualP } from './IndividualPageElements'
+import { IndividualBtnWrapper,IndividualContainer, IndividualBg, ImgBg,ArrowForward,ArrowRight, IndividualContent, IndividualH1, IndividualP, IndividualP1 } from './IndividualPageElements'
 import img from "../../images/hand.jpg"
 import { Button } from '../ButtonElements'
 
@@ -18,7 +18,9 @@ const IndividualPage = () => {
 
       <IndividualContent>
         <IndividualH1>Discover Yourself</IndividualH1>
-        <IndividualP>Our interactive coaching is specific to you. Our technology learns from your conversations, speeches and tendencies and offers suggestions to improve your interactions with the world. </IndividualP>
+        <IndividualP1>ArthEQ is your coach-in-the-pocketTM.</IndividualP1>
+        <IndividualP>Our interactive coaching is specific to you. Our AI engine learns from your interactions with others, observes your tendencies, and offers suggestions to improve how you can better present yourself.</IndividualP>
+
         <IndividualBtnWrapper>
             <Button to='/download' onMouseEnter={onHover} onMouseLeave={onHover}
             primary="true"
