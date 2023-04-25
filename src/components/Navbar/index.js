@@ -34,7 +34,7 @@ const Navbar = ({toggle}) => {
         <NavbarContainer>
           
           <MobileIcon onClick={toggle}>
-            <FaBars />
+            <FaBars/>
           </MobileIcon>
           <NavMenu>
             <NavItem>

@@ -52,6 +52,10 @@ export const Title = styled.h1`
     font-family:"Lato";
     text-align:center;
     margin-bottom:10px;
+    margin-top:5px;
+    background-image: linear-gradient(47deg, orange 10%, #C850C0 20%, #0E74E6 100%);
+    background-clip: text;
+    color:transparent;
 
 `
 

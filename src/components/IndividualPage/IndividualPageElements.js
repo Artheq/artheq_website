@@ -49,12 +49,13 @@ export const IndividualContent = styled.div`
 `
 
 export const IndividualH1 = styled.h1`
-    color: black;
+    background-image: linear-gradient(47deg, orange 10%, #C850C0 20%, #0E74E6 100%);
+    background-clip: text;
+    color:transparent;    
     font-family:'Lato';
     font-weight: bold;
     font-size: 78px;
     text-align:right;    
-    text-shadow: #f1f1f1 1px 1px 1px;
 
 
 
@@ -73,7 +74,7 @@ export const IndividualP = styled.p`
     font-family:"Lato";
     font-size: 25px;
     text-align:right;
-    max-width: 600px;
+    max-width: 700px;
 
     @media screen and (max-width: 768px) {
         font-size: 24px;

@@ -27,32 +27,25 @@ export const ItemWrapper = styled.div`
 export const TextWrapper = styled.div`
     width:37%;
     height:100%;
+    display:grid;
+    align-content:center;
 `
-export const ImgWrapper = styled.div`
-    width:60%;
-    height:100%;
 
-`
+
 
 export const Title = styled.h1`
     font-family:'Lato';
     background-image: linear-gradient(47deg, #0E74E6 0%, #C850C0 20%, #0E74E6 100%);
     background-clip: text;
     color:transparent;
-    font-size:56px;
+    font-size:90px;
     padding-bottom:10px;
+    text-align:center;
 `
 export const Para = styled.p`
+    text-align:center;
     font-family:'Lato';
     color:white;
     font-size:25px;
     font-weight:normal;
-`
-export const Img = styled.img`
-    height:100%;
-    border-radius:5px;
-    width:100%;
-    -o-object-fit:cover;
-    object-fit:cover;
-    object-position:0% 70%;
 `

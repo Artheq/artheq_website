@@ -27,3 +27,4 @@ export const purposeSec2 = {
     primary: true,
     darkText: true,
 }
+

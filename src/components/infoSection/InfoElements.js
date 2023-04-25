@@ -12,7 +12,7 @@ background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#f6f6f6')};
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 1000px;
+    height: 800px;
     width:100%;
     max-width:1600px;
     margin-right:auto;
@@ -55,9 +55,8 @@ export const TopLine = styled.p`
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 16px;
-    background-image: linear-gradient(43deg, #0E74E6 0%, #C850C0 20%, #0E74E6 100%);
-    background-clip: text;
-    color:transparent;
+    
+    color:black;
 `
 export const Heading = styled.h1`
     margin-bottom:24px;
@@ -65,7 +64,9 @@ export const Heading = styled.h1`
     font-weight:normal;
     font-size:55px;
     line-height:1.1;
-    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
+    background-image: linear-gradient(47deg, orange 10%, #C850C0 20%, #0E74E6 100%);
+    background-clip: text;
+    color:transparent;;
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -78,7 +79,7 @@ export const Subtitle = styled.p`
     font-family:"Lato";
     font-weight:normal;
     font-size:25px;
-    line-height:24px;
+    line-height:1.2;
     color: ${({darkText}) => (darkText ? 'black' : 'white')};
 `
 export const BtnWrap = styled.div`
@@ -93,7 +94,12 @@ export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
-    
-
     border-radius:10px;
+
+    &:hover{
+        box-shadow:0px 0px 10px rgba(128,128,128, 0.55) ;
+        transition: all 0.2s ease-in-out;
+
+    }
+
 `

@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
     display: flex;
     padding-top:200px;
     align-items:center;
-    height: 1000px;
+    height: 970px;
     position:relative;
     z-index: 1;
     justify-content:flex-start ;
@@ -36,7 +36,7 @@ export const HeroBg = styled.div`
 
 export const VideoBg = styled.img`
     width: 100%;
-    height:100%;
+    height: 100%;
     -o-object-fit:cover;
     object-fit:cover;
     object-position:0% 0%;

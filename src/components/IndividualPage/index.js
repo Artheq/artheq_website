@@ -19,7 +19,7 @@ const IndividualPage = () => {
       <IndividualContent>
         <IndividualH1>Discover Yourself</IndividualH1>
         <IndividualP1>ArthEQ is your coach-in-the-pocketTM.</IndividualP1>
-        <IndividualP>Our interactive coaching is specific to you. Our AI engine learns from your interactions with others, observes your tendencies, and offers suggestions to improve how you can better present yourself.</IndividualP>
+        <IndividualP>Our AI engine learns from your interactions with others, observes your tendencies, and offers suggestions to improve how you can better present yourself.</IndividualP>
 
         <IndividualBtnWrapper>
             <Button to='/download' onMouseEnter={onHover} onMouseLeave={onHover}

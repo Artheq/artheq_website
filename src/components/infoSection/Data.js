@@ -8,7 +8,6 @@ export const homeObjOne = {
     description: 'Download our app to get access to our exclusive services that allow you to discover yourself through better communication.',
     buttonLabel: 'Download Arth',
     imgStart: false,
-    img: require("../../images/phone1.png"),
     alt:"Image not loading",
     dark: false,
     primary: true,
@@ -19,7 +18,7 @@ export const homeObjOne = {
 
 export const homeObjTwo = {
     id: 'wwd',
-    lightBg:true,
+    lightBg:false,
     lightText:false,
     topLine: "LEAD COMMUNICATION",
     headline: "Develop impactful leaders with Arth’s LEAD technology",
@@ -51,7 +50,7 @@ export const homeObjThree = {
 
 export const homeObjFour = {
     id: 'wwd',
-    lightBg:true,
+    lightBg:false,
     lightText:false,
     topLine: "EXPLORE YOURSELF",
     headline: "Enhance self-awareness, communication effectiveness and personal brand",
@@ -106,6 +105,22 @@ export const historyObj1 = {
     description: 'ArthEQ was founded by Maneesh Sharma in 2022. The word Arth is derived from Sanskrit and translates into “meaning or essence”. The inspiration for ArthEQ came from Maneesh’s own professional and spiritual journey where he noted how careers and personal relationships are impacted by a lack of self-awareness and tools that inform people and organizations about their “personal culture”. ArthEQ was thus founded to help people and organizations transform themselves- “By discovering yourself”',
     buttonLabel: 'Download ARTH',
     imgStart: false,
+    img: require("../../images/comm.jpg"),
+    alt:"Image not loading",
+    dark: false,
+    primary: true,
+    darkText: true
+}
+
+export const peopleObj1 = {
+    id: 'wwd',
+    lightBg:true,
+    lightText:false,
+    topLine: "",
+    headline: "Enhance Your Emotional Intelligence",
+    description: 'Arth’s AI engine can uncover major drivers of EI such as self-awareness, empathy, communication, making you more successful, feel more fulfilled, and have greater self-confidence.',
+    buttonLabel: 'Request Demo',
+    imgStart: true,
     img: require("../../images/comm.jpg"),
     alt:"Image not loading",
     dark: false,
