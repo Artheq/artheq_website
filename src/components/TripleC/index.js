@@ -2,7 +2,6 @@ import React from 'react'
 import { MainContainer, Layer, LeftContainer, RightContainer, TopLine, Heading, Subtitle, Li, IconL, TextCont, IconL2, IconL3, IconL4} from './tripleElements';
 import {SiSpeedtest} from 'react-icons/si'
 import {FaComments, FaLaugh, FaBrain} from 'react-icons/fa'
-import { Button } from '../ButtonElements';
 
 
 
