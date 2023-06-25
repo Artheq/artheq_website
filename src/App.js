@@ -13,6 +13,7 @@ import Purpose from './pages/purpose';
 import History from './pages/history';
 import Why from './pages/why';
 import Cookies from './pages/cookies';
+import Admin from './components/AdminSignIn/Admin';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/purpose" element={<Purpose/>} />
         <Route path="/history" element={<History/>} />
         <Route path="/cookies" element={<Cookies/>} />
+        <Route path="/admin" element={<Admin/>} /> 
 
 
       </Routes>
