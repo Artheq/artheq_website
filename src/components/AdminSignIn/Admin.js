@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title} from './AdminElements';
+import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title, SubTitle} from './AdminElements';
+import AdminStatsCard from './AdminStatsCard';
 import styled, { keyframes } from 'styled-components';
-import {auth} from '../../firebase';
+import {auth, fireStore} from '../../firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import DataTable from './DataTable';
+
 // import { signInWithEmailAndPassword, onAuthStateChanged, getAuth } from "firebase/auth";
 
 
@@ -18,6 +22,9 @@ const Admin = () => {
   const [email, setEmail] = useState('');
   const [logged, setLogged] = useState(false);
   const [user, setUser] = useState(null);
+  const [numUsers, setNumUsers] = useState(0);
+  const [numRecordings, setNumRecordings] = useState(0);
+  const [chatGPTData, setChatGPTData] = useState([]);
 
 //   const auth = getAuth();
   
@@ -34,23 +41,84 @@ const Admin = () => {
 
     await signInWithEmailAndPassword(auth, email, password)
   };
+
   
-   useEffect(() => {
-    
+  
+  useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
-        console.log("Logged in")
-        setUser(user)
-        console.log(user)
-        if (user === null){
-        setLogged(false);}
-        else {
-            setLogged(true);
-
-        }
-
-    })
+       if (user) {
+          async function fetchUserData() {
+             const q = query(collection(fireStore, "users"), where("userEmail", "==",  user.email));
+             const querySnapshot = await getDocs(q);
+             querySnapshot.forEach(async(doc) => {
+                if (doc.data().role === "admin"){
+                    setLogged(true);
+                    getAllUsers();
+                    getAllRecordings();
+                    await getChatGPTData();
+                } else {
+                    handleLogout();
+                }
+             });
+          }
+          fetchUserData();
+       } else {
+          setLogged(false);
+       }
+    });
     return unsubscribe
-  }, [])
+ }, []);
+
+// update when numUsers, numCollections, or chatGPTData gets updated
+// useEffect(() => {
+//   setLogged(true);
+//   getAllUsers();
+//   getAllRecordings();
+//   getChatGPTData();
+//   }, [numUsers, numRecordings, chatGPTData]);
+ 
+
+
+  const getAllUsers =  () => {
+    const q = query(collection(fireStore, "users"));
+    const querySnapshot =  getDocs(q).then((querySnapshot) => {
+        setNumUsers(querySnapshot.size);
+    });
+
+   //get the number of users
+    console.log(`Number of users: ${querySnapshot.size}`);
+   return "We will get the number of users here";
+  }
+
+  const getAllRecordings =  () => {
+    const q = query(collection(fireStore, "recordings"));
+    const querySnapshot =  getDocs(q).then((querySnapshot) => {
+        setNumRecordings(querySnapshot.size);
+    });
+
+   //get the number of users
+    console.log(`Number of users: ${querySnapshot.size}`);
+   return "We will get the number of users here";
+  }
+
+  const getChatGPTData =  async() => {
+    const q = query(collection(fireStore, "chat_gpt_api_results"));
+    const allChatData = [];
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      console.log(`Chat GPT Data: ${JSON.stringify(doc.data())}`);
+      allChatData.push(doc.data());
+    });
+    setChatGPTData(allChatData);
+
+    // getDocs(q).then((querySnapshot) => {
+    //   querySnapshot.forEach((doc) => {
+    //     console.log(`Chat GPT Data: ${JSON.stringify(doc.data())}`);
+    //     allChatData.push(doc.data());
+    //   });
+    // });
+    // setChatGPTData(allChatData);
+  }
 
   return (
     <CenteredContainer>
@@ -82,7 +150,12 @@ const Admin = () => {
         </WidAdj>
         ) : 
         <div>
-        <Title>User Logged in</Title><Button onClick={handleLogout}>Logout</Button>
+        <Title>Welcome Admin!</Title>
+        <Button onClick={handleLogout}>Logout</Button>
+        <AdminStatsCard title="Number of Users" count={numUsers} />
+        <AdminStatsCard title="Number of Recordings" count={numRecordings} />
+        <AdminStatsCard title="Number of Chat Gpt data" count={chatGPTData.length} />
+        {chatGPTData.length > 0 && <DataTable data={chatGPTData} transpose={true} />}
         </div>
         }
       </FormContainer>

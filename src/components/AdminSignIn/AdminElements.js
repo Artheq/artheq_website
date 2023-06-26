@@ -91,12 +91,12 @@ export const Title = styled.h1`
   font-weight:800;
   font-size:3rem;
   margin-left:-5px;
-`
+`;
 
 export const SubTitle = styled.p`
   font-weight:500;
   margin-top:5px;
   max-width:500px;
   
-`
+`;
 
