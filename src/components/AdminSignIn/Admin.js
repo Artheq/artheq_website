@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title, ResultsContainer, ContainerOne, ContainerTwo, ContainerInside} from './AdminElements';
+import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title, ResultsContainer, ContainerOne, ContainerTwo, ContainerInside, TitleBar, Title1,Subtitle1} from './AdminElements';
 import AdminStatsCard from './AdminStatsCard';
 import styled from 'styled-components';
 import {auth, fireStore} from '../../firebase';
@@ -151,7 +151,10 @@ const Admin = () => {
         ) : 
         <ResultsContainer>
         <ContainerOne>
-        <Title>DATA CENTER</Title>
+        <TitleBar>
+            <Title1>DATA CENTER</Title1>
+            <Subtitle1>Arth Admin Services</Subtitle1>
+        </TitleBar>
             <AdminStatsCard title="Number of Users" count={numUsers} />
             <AdminStatsCard title="Number of Recordings" count={numRecordings} />
             <AdminStatsCard title="Number of Chat Gpt data" count={chatGPTData.length} />

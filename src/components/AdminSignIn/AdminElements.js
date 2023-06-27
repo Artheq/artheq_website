@@ -75,11 +75,11 @@ export const Button = styled.button`
   border-radius:4px;
   background-color: #1864B8;
   color: #fff;
-  font-weight:800;
+  font-weight:500;
   font-size:26px;
   border: none;
   cursor: pointer;
-  margin-top:85px;
+  margin-top:30px;
 
   &:hover {
         transition: all 0.2s ease-in-out;
@@ -94,7 +94,6 @@ export const Title = styled.h1`
   font-size:3.5rem;
   margin-left:-5px;
   text-align:center;
-  color:black;
 `;
 
 export const SubTitle = styled.p`
@@ -112,17 +111,45 @@ export const ResultsContainer = styled.div`
 
 export const ContainerOne = styled.div`
     display:flex;
-    width:16%;
     height:977px;
     flex-direction:column;
-    background-color:white;
-    padding:50px;
-    background-color:#f9f9f9;
+    background-color:#373330;
     align-items:center;
+    box-shadow: 1.5px 0px 5px black;
+    z-index:2;
 `
 
 export const ContainerTwo = styled.div`
+    height:977px;
+    display:flex;
+    align-items:center;
+    background-color:#4a4542;
+    z-index:1;
 `
 export const ContainerInside = styled.div`
-    padding: 90px
+    padding: 90px;
+`
+export const TitleBar = styled.div`
+    background-color:black;
+    width:96%;
+    border-radius:2px;
+    height:10%;
+    margin-top:10px;
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    flex-direction:column;
+`
+export const Title1 = styled.h2`
+    color:#898785;
+    text-align:center;
+    font-size:2rem;
+    
+`
+export const Subtitle1 = styled.h3`
+    color:#63615F;
+    font-size:1rem;
+    word-spacing:5px;
+    letter-spacing:3px;
+    font-weight:400;
 `
