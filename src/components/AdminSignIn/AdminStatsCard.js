@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
+  border-radius: 4px;
+  height:200px;
+  width:200px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,13 +13,17 @@ const Card = styled.div`
 `;
 
 const Count = styled.h1`
-  font-size: 3em;
-  margin: 0;
+  font-size: 4.5rem;
+  font-weight:900;
 `;
 
 const Title = styled.h2`
-  font-size: 1.5em;
+  font-size: 1rem;
+  font-weight:400;
+  max-width:130px;
   margin: 0;
+  text-align:center;
+
 `;
 
 const AdminStatsCard = ({ title, count }) => (

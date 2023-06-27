@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-  height:1000px;
+  overflow: auto;
   width:100%;
+  height:977px;   
   display:flex;
   justify-content:center;
   align-items:center;
   margin: 0 auto;
   background-color:#1F83F2;
+  
 `;
 
 export const WidAdj = styled.div`
@@ -69,15 +71,15 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 2.5rem;
   border-radius:4px;
-  background-color: #124781;
-  box-shadow:-3px 3px 0.5px black ;
+  background-color: #1864B8;
   color: #fff;
   font-weight:800;
-  font-size:28px;
+  font-size:26px;
   border: none;
   cursor: pointer;
+  margin-top:85px;
 
   &:hover {
         transition: all 0.2s ease-in-out;
@@ -88,15 +90,39 @@ export const Button = styled.button`
 `;
 
 export const Title = styled.h1`
-  font-weight:800;
-  font-size:3rem;
+  font-weight:400;
+  font-size:3.5rem;
   margin-left:-5px;
+  text-align:center;
+  color:black;
 `;
 
 export const SubTitle = styled.p`
   font-weight:500;
-  margin-top:5px;
   max-width:500px;
   
 `;
 
+export const ResultsContainer = styled.div`
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`
+
+export const ContainerOne = styled.div`
+    display:flex;
+    width:16%;
+    height:977px;
+    flex-direction:column;
+    background-color:white;
+    padding:50px;
+    background-color:#f9f9f9;
+    align-items:center;
+`
+
+export const ContainerTwo = styled.div`
+`
+export const ContainerInside = styled.div`
+    padding: 90px
+`

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title, SubTitle} from './AdminElements';
+import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title, ResultsContainer, ContainerOne, ContainerTwo, ContainerInside} from './AdminElements';
 import AdminStatsCard from './AdminStatsCard';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import {auth, fireStore} from '../../firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import DataTable from './DataTable';
 
 // import { signInWithEmailAndPassword, onAuthStateChanged, getAuth } from "firebase/auth";
+
 
 
 const CenteredContainer = styled.div`
@@ -21,7 +22,6 @@ const Admin = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [logged, setLogged] = useState(false);
-  const [user, setUser] = useState(null);
   const [numUsers, setNumUsers] = useState(0);
   const [numRecordings, setNumRecordings] = useState(0);
   const [chatGPTData, setChatGPTData] = useState([]);
@@ -149,14 +149,18 @@ const Admin = () => {
           </Form>
         </WidAdj>
         ) : 
-        <div>
-        <Title>Welcome Admin!</Title>
-        <Button onClick={handleLogout}>Logout</Button>
-        <AdminStatsCard title="Number of Users" count={numUsers} />
-        <AdminStatsCard title="Number of Recordings" count={numRecordings} />
-        <AdminStatsCard title="Number of Chat Gpt data" count={chatGPTData.length} />
-        {chatGPTData.length > 0 && <DataTable data={chatGPTData} transpose={true} />}
-        </div>
+        <ResultsContainer>
+        <ContainerOne>
+        <Title>DATA CENTER</Title>
+            <AdminStatsCard title="Number of Users" count={numUsers} />
+            <AdminStatsCard title="Number of Recordings" count={numRecordings} />
+            <AdminStatsCard title="Number of Chat Gpt data" count={chatGPTData.length} />
+            <Button onClick={handleLogout}>Logout</Button>
+        </ContainerOne>
+        <ContainerTwo>
+            <ContainerInside>{chatGPTData.length > 0 && <DataTable data={chatGPTData} transpose={true} />}</ContainerInside>
+        </ContainerTwo>
+        </ResultsContainer>
         }
       </FormContainer>
     </CenteredContainer>
