@@ -143,13 +143,13 @@ export const TitleBar = styled.div`
 export const Title1 = styled.h2`
     color:#898785;
     text-align:center;
-    font-size:2rem;
+    font-size:1.9rem;
     
 `
 export const Subtitle1 = styled.h3`
     color:#63615F;
-    font-size:1rem;
-    word-spacing:5px;
+    font-size:.9rem;
+    word-spacing:8px;
     letter-spacing:3px;
     font-weight:400;
 `
