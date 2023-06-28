@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title, ResultsContainer, ContainerOne, ContainerTwo, ContainerInside, TitleBar, Title1,Subtitle1} from './AdminElements';
+import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title,
+         ResultsContainer, ContainerOne, ContainerTwo, ContainerInsideOne, ContainerInsideTwo,
+          TitleBar, Title1,Subtitle1, Dropdown, Option} from './AdminElements';
 import AdminStatsCard from './AdminStatsCard';
 import styled from 'styled-components';
 import {auth, fireStore} from '../../firebase';
@@ -161,7 +163,26 @@ const Admin = () => {
             <Button onClick={handleLogout}>Logout</Button>
         </ContainerOne>
         <ContainerTwo>
-            <ContainerInside>{chatGPTData.length > 0 && <DataTable data={chatGPTData} transpose={true} />}</ContainerInside>
+          <ContainerInsideOne>
+          <Dropdown>
+          <Option value="User1">User 1</Option>
+          <Option value="User2">User 2</Option>
+          <Option value="User3">User 3</Option>
+        </Dropdown>
+
+        <Dropdown>
+          <Option value="Recording1">Recording 1</Option>
+          <Option value="Recording2">Recording 2</Option>
+          <Option value="Recording3">Recording 3</Option>
+        </Dropdown>
+
+        <Dropdown>
+          <Option value="Table1">Table 1</Option>
+          <Option value="Table2">Table 2</Option>
+          <Option value="Table3">Table 3</Option>
+        </Dropdown>
+        </ContainerInsideOne>
+            <ContainerInsideTwo>{chatGPTData.length > 0 && <DataTable data={chatGPTData} transpose={true} />}</ContainerInsideTwo>
         </ContainerTwo>
         </ResultsContainer>
         }

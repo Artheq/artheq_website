@@ -122,12 +122,21 @@ export const ContainerOne = styled.div`
 export const ContainerTwo = styled.div`
     height:977px;
     display:flex;
+    flex-direction:column;
     align-items:center;
     background-color:#4a4542;
     z-index:1;
 `
-export const ContainerInside = styled.div`
+export const ContainerInsideOne = styled.div`
+display:flex;
+flex-direction:row;
+align-items:center;
+`
+
+export const ContainerInsideTwo = styled.div`
     padding: 90px;
+    display:flex;
+    align-items:center;
 `
 export const TitleBar = styled.div`
     background-color:black;
@@ -153,3 +162,39 @@ export const Subtitle1 = styled.h3`
     letter-spacing:3px;
     font-weight:400;
 `
+
+export const Dropdown = styled.select`
+  background-image: linear-gradient(#20aee3, #20aee3), linear-gradient(#bfbfbf, #bfbfbf);
+  border: 0 none;
+  box-shadow: none;
+  float: none;
+  background-color: white;
+  background-position: center bottom, center calc(100% - 1px);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  padding: 0;
+  margin-right:20px;
+  margin-top:30px;
+  transition: background 0s ease-out 0s;
+  min-height: 35px;
+  display: initial;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+
+  &:focus {
+    background-size: 100% 2px, 100% 1px;
+    outline: 0 none;
+    transition-duration: 0.3s;
+    color: black;
+  }
+`;
+
+export const Option = styled.option`
+  color: black;
+  background-color: white;
+  display: flex;
+  white-space: pre;
+  min-height: 20px;
+  padding: 0px 10px 5px;
+`;
