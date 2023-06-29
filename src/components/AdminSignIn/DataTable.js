@@ -12,12 +12,14 @@ const StyledTh = styled.th`
   padding: 8px;
   text-align: left;
   background-color: #f2f2f2;
+  font-size: 30px;
 `;
 
 const StyledTd = styled.td`
   border: 1px solid #dddddd;
   padding: 8px;
   background-color: #f2f2f2;
+  font-size: 29px;
 `;
 
 const ScrollableContainer = styled.div`
