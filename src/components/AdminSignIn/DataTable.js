@@ -23,7 +23,7 @@ const StyledTd = styled.td`
 `;
 
 const ScrollableContainer = styled.div`
-  height: 500px; // or whatever height you want
+  height: 80vh;
   overflow: auto;
 `;
 

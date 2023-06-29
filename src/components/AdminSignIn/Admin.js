@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title,
+import { CenteredContainer, FormContainer, Form, FormGroup, Label, Input, Button, WidAdj, Title,
          ResultsContainer, ContainerOne, ContainerTwo, ContainerInsideOne, ContainerInsideTwo,
           TitleBar, Title1,Subtitle1, Dropdown, Option} from './AdminElements';
 import AdminStatsCard from './AdminStatsCard';
@@ -13,12 +13,7 @@ import DataTable from './DataTable';
 
 
 
-const CenteredContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-`;
 
 const Admin = () => {
   const [password, setPassword] = useState('');
@@ -33,6 +28,7 @@ const Admin = () => {
   const [selectedTable, setSelectedTable] = useState(null);
   const [userRecordings, setUserRecordings] = useState([]);
   const [selectedTableData, setSelectedTableData] = useState([]);
+  const [userAvailableTables, setUserAvailableTables] = useState([]);
 
 
 
@@ -90,6 +86,7 @@ const Admin = () => {
 
 useEffect(() => {
   if (selectedUser) {
+      setSelectedRecording(null);
       const fetchUserRecordings = async () => {
           const q = query(collection(fireStore, "recordings"), where("user_id", "==", selectedUser));
           const userRecordingsData = [];
@@ -105,15 +102,74 @@ useEffect(() => {
   }
 }, [selectedUser]);
 
+// useEffect(() => {
+//   if (selectedRecording) {
+//     setSelectedTable(null);
+//      // get recording id for selected recording
+//      const recording = userRecordings.find(
+//       (recording) => recording.recording_start_time === selectedRecording
+//     );
+     
+//     const availableTabes = [];
+//     const allTables = ["chat_gpt_api_results", "stats", "juji_api_data"]
+//     const findAvailableTables = async () => {
+//       for (const table of allTables) {
+//            console.log("table is: " + table);
+//            console.log("Looking for", selectedUser,  "recording id is: " + recording.recording_id);
+//            const q = query(collection(fireStore, table), where("recording_id", "==", recording.recording_id));
+//            getDocs(q).then((querySnapshot) => {
+//             console.log("querySnapshot size for ", table  + "is: " + querySnapshot.size);
+//             if (querySnapshot.size > 0 ) {
+//               availableTabes.push(table);
+//             }
+//         });
+//         }
+//         setUserAvailableTables(availableTabes);
+//       }
+//       findAvailableTables();
+//   } else {
+//     setUserAvailableTables([]);  // Clear recordings when no user is selected
+//   }
+// }, [selectedRecording]);
+
+useEffect(() => {
+  if (selectedRecording) {
+    setSelectedTable(null);
+    setUserAvailableTables([]);
+    // get recording id for selected recording
+    const recording = userRecordings.find(
+      (recording) => recording.recording_start_time === selectedRecording
+    );
+    
+    const allTables = ["chat_gpt_api_results", "stats", "juji_api_data"];
+    const fetchAvailableTables = async () => {
+      const tableChecks = allTables.map(async (table) => {
+        const q = query(collection(fireStore, table), where("recording_id", "==", recording.recording_id));
+        const querySnapshot = await getDocs(q);
+        if (querySnapshot.size > 0) {
+          return table;
+        }
+        return null;
+      });
+
+      const tableResults = await Promise.all(tableChecks);
+      const availableTables = tableResults.filter(table => table !== null);
+      setUserAvailableTables(availableTables);
+    };
+    fetchAvailableTables();
+  } else {
+    setUserAvailableTables([]);  // Clear recordings when no user is selected
+  }
+}, [selectedRecording]);
+
+
 useEffect(() => {
   if (selectedTable) {
-     console.log("selected recording start time is: " + userRecordings);
      // get recording id for selected recording
      const recording = userRecordings.find(
       (recording) => recording.recording_start_time === selectedRecording
     );
 
-    console.log("selected recording is: " + recording);
      
       const fetchTable = async () => {
           const q = query(collection(fireStore, selectedTable), where("user_id", "==", selectedUser), where("recording_id", "==", recording.recording_id));
@@ -121,13 +177,16 @@ useEffect(() => {
           querySnapshot.forEach((doc) => {
               setSelectedTableData([doc.data()]);
           });
-          console.log(`Selected Table Data: ${JSON.stringify(selectedTableData)}`);
       }
       fetchTable();
   } else {
     setSelectedTableData(null);  // Clear recordings when no user is selected
   }
 }, [selectedTable]);
+
+useEffect(() => {
+  setSelectedTable(null);
+}, [userAvailableTables]);
  
 
 
@@ -236,17 +295,17 @@ useEffect(() => {
     )}
 
 
-        {selectedUser && selectedRecording && 
+        {selectedUser && selectedRecording && userAvailableTables.length >0 &&
           <Dropdown value={selectedTable} onChange={(e) => setSelectedTable(e.target.value)}>
           <Option value="">Choose A Table</Option>
-          <Option value="chat_gpt_api_results">Chat GPT Table</Option>
-          <Option value="stats">Stats Table</Option>
-          <Option value="juji_api_data">Juji Table</Option>
+          {userAvailableTables.map((table, index) =>
+            <Option key={index} value={table}>{table}</Option>
+          )}
         </Dropdown>}
         </ContainerInsideOne>
         <ContainerInsideTwo>
-            {selectedTableData && selectedTableData.length > 0 &&  <DataTable data={selectedTableData} transpose={true} />}
-            </ContainerInsideTwo>
+            {selectedRecording && selectedTableData && selectedTableData.length > 0 &&  <DataTable data={selectedTableData} transpose={true} />}
+        </ContainerInsideTwo>
         </ContainerTwo>
         </ResultsContainer>
         }

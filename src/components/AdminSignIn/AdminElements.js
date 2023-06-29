@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
+export const CenteredContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const FormContainer = styled.div`
   overflow: auto;
   width:100%;
-  height:977px;   
+  // height:977px;
+  height:95vh;
   display:flex;
   justify-content:center;
   align-items:center;
   margin: 0 auto;
   background-color:#1F83F2;
-  
 `;
 
 export const WidAdj = styled.div`
@@ -104,14 +111,16 @@ export const SubTitle = styled.p`
 
 export const ResultsContainer = styled.div`
     width:100%;
+    height:100%;
     display:flex;
-    justify-content:center;
+    justify-content: center;
     align-items:center;
 `
 
 export const ContainerOne = styled.div`
     display:flex;
-    height:977px;
+    width:5%;
+    height:100%;
     flex-direction:column;
     background-color:#373330;
     align-items:center;
@@ -120,8 +129,8 @@ export const ContainerOne = styled.div`
 `
 
 export const ContainerTwo = styled.div`
-    height:977px;
-    width:90%;
+    height:100%;
+    width:95%;
     display:flex;
     flex-direction:column;
     align-items: space-between;
@@ -132,6 +141,8 @@ export const ContainerInsideOne = styled.div`
 display:flex;
 flex-direction:row;
 align-items:center;
+justify-content:center;
+height:10vh;
 `
 
 export const ContainerInsideTwo = styled.div`
@@ -139,6 +150,8 @@ export const ContainerInsideTwo = styled.div`
     display:flex;
     align-items:center;
     width:100%;
+    height:80vh;
+    justify-content:center;
 `
 export const TitleBar = styled.div`
     background-color:black;
@@ -178,11 +191,12 @@ export const Dropdown = styled.select`
   margin-right:20px;
   margin-top:30px;
   transition: background 0s ease-out 0s;
-  min-height: 35px;
+  min-height: 50px;
   display: initial;
-  width: 100%;
+  width: 15%;
   outline: none;
-  font-size: 15px;
+  font-size: 32px;
+  text-align:center;
 
   &:focus {
     background-size: 100% 2px, 100% 1px;
@@ -199,4 +213,5 @@ export const Option = styled.option`
   white-space: pre;
   min-height: 20px;
   padding: 0px 10px 5px;
+  font-size: 24px;
 `;
