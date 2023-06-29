@@ -119,7 +119,7 @@ export const ResultsContainer = styled.div`
 
 export const ContainerOne = styled.div`
     display:flex;
-    width:5%;
+    width:10vw;
     height:100%;
     flex-direction:column;
     background-color:#373330;
