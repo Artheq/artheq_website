@@ -121,9 +121,10 @@ export const ContainerOne = styled.div`
 
 export const ContainerTwo = styled.div`
     height:977px;
+    width:90%;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items: space-between;
     background-color:#4a4542;
     z-index:1;
 `
@@ -134,9 +135,10 @@ align-items:center;
 `
 
 export const ContainerInsideTwo = styled.div`
-    padding: 90px;
+    padding: 3%;
     display:flex;
     align-items:center;
+    width:100%;
 `
 export const TitleBar = styled.div`
     background-color:black;

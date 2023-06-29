@@ -25,8 +25,16 @@ const Admin = () => {
   const [email, setEmail] = useState('');
   const [logged, setLogged] = useState(false);
   const [numUsers, setNumUsers] = useState(0);
+  const [users, setAllUsers] = useState([]);
   const [numRecordings, setNumRecordings] = useState(0);
   const [chatGPTData, setChatGPTData] = useState([]);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [selectedRecording, setSelectedRecording] = useState(null);
+  const [selectedTable, setSelectedTable] = useState(null);
+  const [userRecordings, setUserRecordings] = useState([]);
+  const [selectedTableData, setSelectedTableData] = useState([]);
+
+
 
 //   const auth = getAuth();
   
@@ -49,6 +57,7 @@ const Admin = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
        if (user) {
+          
           async function fetchUserData() {
              const q = query(collection(fireStore, "users"), where("userEmail", "==",  user.email));
              const querySnapshot = await getDocs(q);
@@ -78,17 +87,63 @@ const Admin = () => {
 //   getAllRecordings();
 //   getChatGPTData();
 //   }, [numUsers, numRecordings, chatGPTData]);
+
+useEffect(() => {
+  if (selectedUser) {
+      const fetchUserRecordings = async () => {
+          const q = query(collection(fireStore, "recordings"), where("user_id", "==", selectedUser));
+          const userRecordingsData = [];
+          const querySnapshot = await getDocs(q);
+          querySnapshot.forEach((doc) => {
+              userRecordingsData.push({...doc.data(), recording_id: doc.id});
+          });
+          setUserRecordings(userRecordingsData);
+      }
+      fetchUserRecordings();
+  } else {
+      setUserRecordings([]);  // Clear recordings when no user is selected
+  }
+}, [selectedUser]);
+
+useEffect(() => {
+  if (selectedTable) {
+     console.log("selected recording start time is: " + userRecordings);
+     // get recording id for selected recording
+     const recording = userRecordings.find(
+      (recording) => recording.recording_start_time === selectedRecording
+    );
+
+    console.log("selected recording is: " + recording);
+     
+      const fetchTable = async () => {
+          const q = query(collection(fireStore, selectedTable), where("user_id", "==", selectedUser), where("recording_id", "==", recording.recording_id));
+          const querySnapshot = await getDocs(q);
+          querySnapshot.forEach((doc) => {
+              setSelectedTableData([doc.data()]);
+          });
+          console.log(`Selected Table Data: ${JSON.stringify(selectedTableData)}`);
+      }
+      fetchTable();
+  } else {
+    setSelectedTableData(null);  // Clear recordings when no user is selected
+  }
+}, [selectedTable]);
  
 
 
-  const getAllUsers =  () => {
+  const getAllUsers =  async() => {
     const q = query(collection(fireStore, "users"));
-    const querySnapshot =  getDocs(q).then((querySnapshot) => {
-        setNumUsers(querySnapshot.size);
+    const allUsersData = [];
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      const user = {...doc.data(), userId: doc.id};
+      allUsersData.push(user);
     });
+    setAllUsers(allUsersData);
+    setNumUsers(querySnapshot.size);
 
    //get the number of users
-    console.log(`Number of users: ${querySnapshot.size}`);
+    // console.log(`Number of users: ${querySnapshot.size}`);
    return "We will get the number of users here";
   }
 
@@ -99,7 +154,7 @@ const Admin = () => {
     });
 
    //get the number of users
-    console.log(`Number of users: ${querySnapshot.size}`);
+    // console.log(`Number of users: ${querySnapshot.size}`);
    return "We will get the number of users here";
   }
 
@@ -108,7 +163,7 @@ const Admin = () => {
     const allChatData = [];
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      console.log(`Chat GPT Data: ${JSON.stringify(doc.data())}`);
+      // console.log(`Chat GPT Data: ${JSON.stringify(doc.data())}`);
       allChatData.push(doc.data());
     });
     setChatGPTData(allChatData);
@@ -164,25 +219,34 @@ const Admin = () => {
         </ContainerOne>
         <ContainerTwo>
           <ContainerInsideOne>
-          <Dropdown>
-          <Option value="User1">User 1</Option>
-          <Option value="User2">User 2</Option>
-          <Option value="User3">User 3</Option>
+          <Dropdown value={selectedUser} onChange={(e) => setSelectedUser(e.target.value)}>
+          <Option value="">Choose user</Option>
+          {users.map((user, index) => 
+            <Option key={index} value={user.userId}>{user.userEmail}</Option>
+          )}
         </Dropdown>
 
-        <Dropdown>
-          <Option value="Recording1">Recording 1</Option>
-          <Option value="Recording2">Recording 2</Option>
-          <Option value="Recording3">Recording 3</Option>
+        {selectedUser && userRecordings.length > 0 && (
+        <Dropdown value={selectedRecording} onChange={(e) => setSelectedRecording(e.target.value)}>
+            <Option value="">Choose recording</Option>
+            {userRecordings.map((recording, index) => 
+                <Option key={index} value={recording.id}>{recording.recording_start_time}</Option>
+            )}
         </Dropdown>
+    )}
 
-        <Dropdown>
-          <Option value="Table1">Table 1</Option>
-          <Option value="Table2">Table 2</Option>
-          <Option value="Table3">Table 3</Option>
-        </Dropdown>
+
+        {selectedUser && selectedRecording && 
+          <Dropdown value={selectedTable} onChange={(e) => setSelectedTable(e.target.value)}>
+          <Option value="">Choose A Table</Option>
+          <Option value="chat_gpt_api_results">Chat GPT Table</Option>
+          <Option value="stats">Stats Table</Option>
+          <Option value="juji_api_data">Juji Table</Option>
+        </Dropdown>}
         </ContainerInsideOne>
-            <ContainerInsideTwo>{chatGPTData.length > 0 && <DataTable data={chatGPTData} transpose={true} />}</ContainerInsideTwo>
+        <ContainerInsideTwo>
+            {selectedTableData && selectedTableData.length > 0 &&  <DataTable data={selectedTableData} transpose={true} />}
+            </ContainerInsideTwo>
         </ContainerTwo>
         </ResultsContainer>
         }
