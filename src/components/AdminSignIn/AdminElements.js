@@ -128,7 +128,7 @@ export const ContainerOne = styled.div`
     box-shadow: 1.5px 0px 5px black;
     z-index:2;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1640px) {
       width:16vw;
       height:100%;
     }
@@ -142,7 +142,7 @@ export const ContainerTwo = styled.div`
     align-items: space-between;
     background-color:#4a4542;
     z-index:1;
-    @media (max-width: 1440px) {
+    @media (max-width: 1640px) {
       width:84vw;
       height:100%;
     }
@@ -218,7 +218,7 @@ export const Dropdown = styled.select`
     color: black;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1640px) {
       width:26vw;
     }
 `;
