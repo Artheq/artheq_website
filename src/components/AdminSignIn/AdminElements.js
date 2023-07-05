@@ -129,7 +129,7 @@ export const ContainerOne = styled.div`
     z-index:2;
 
     @media (max-width: 1440px) {
-      width:13vw;
+      width:16vw;
       height:100%;
     }
 `
@@ -143,7 +143,7 @@ export const ContainerTwo = styled.div`
     background-color:#4a4542;
     z-index:1;
     @media (max-width: 1440px) {
-      width:87vw;
+      width:84vw;
       height:100%;
     }
 `
