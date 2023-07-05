@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const CenteredContainer = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   align-items: center;
+
 `;
 
 export const FormContainer = styled.div`
@@ -110,7 +111,7 @@ export const SubTitle = styled.p`
 `;
 
 export const ResultsContainer = styled.div`
-    width:100%;
+    width:100vw;
     height:100%;
     display:flex;
     justify-content: center;
@@ -119,23 +120,32 @@ export const ResultsContainer = styled.div`
 
 export const ContainerOne = styled.div`
     display:flex;
-    width:10vw;
+    width:6vw;
     height:100%;
     flex-direction:column;
     background-color:#373330;
     align-items:center;
     box-shadow: 1.5px 0px 5px black;
     z-index:2;
+
+    @media (max-width: 1440px) {
+      width:13vw;
+      height:100%;
+    }
 `
 
 export const ContainerTwo = styled.div`
     height:100%;
-    width:95%;
+    width:94vw;
     display:flex;
     flex-direction:column;
     align-items: space-between;
     background-color:#4a4542;
     z-index:1;
+    @media (max-width: 1440px) {
+      width:87vw;
+      height:100%;
+    }
 `
 export const ContainerInsideOne = styled.div`
 display:flex;
@@ -143,21 +153,23 @@ flex-direction:row;
 align-items:center;
 justify-content:center;
 height:10vh;
+// width:vw;
 `
 
 export const ContainerInsideTwo = styled.div`
-    padding: 3%;
+    margin-top:10px;
+    padding: 2%;
     display:flex;
     align-items:center;
-    width:100%;
+    // width:100%;
     height:80vh;
     justify-content:center;
 `
 export const TitleBar = styled.div`
     background-color:black;
-    width:96%;
+    // width:96%;
     border-radius:2px;
-    height:10%;
+    height:20vh;
     margin-top:10px;
     display:flex;
     justify-content:center; 
@@ -176,6 +188,7 @@ export const Subtitle1 = styled.h3`
     word-spacing:8px;
     letter-spacing:3px;
     font-weight:400;
+    text-align:center;
 `
 
 export const Dropdown = styled.select`
@@ -193,7 +206,7 @@ export const Dropdown = styled.select`
   transition: background 0s ease-out 0s;
   min-height: 50px;
   display: initial;
-  width: 15%;
+  width: 15vw;
   outline: none;
   font-size: 32px;
   text-align:center;
@@ -204,6 +217,10 @@ export const Dropdown = styled.select`
     transition-duration: 0.3s;
     color: black;
   }
+
+  @media (max-width: 1440px) {
+      width:26vw;
+    }
 `;
 
 export const Option = styled.option`

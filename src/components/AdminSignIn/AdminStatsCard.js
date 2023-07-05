@@ -8,7 +8,7 @@ const Card = styled.div`
 
 const CardHolder = styled.div`
   border-radius: 4px;
-  height:250px;
+  height: 20vh;
   width:250px;
   margin: 0px;
   display: flex;
