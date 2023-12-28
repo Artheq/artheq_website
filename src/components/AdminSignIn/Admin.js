@@ -11,10 +11,6 @@ import DataTable from './DataTable';
 
 // import { signInWithEmailAndPassword, onAuthStateChanged, getAuth } from "firebase/auth";
 
-
-
-
-
 const Admin = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -30,10 +26,7 @@ const Admin = () => {
   const [selectedTableData, setSelectedTableData] = useState([]);
   const [userAvailableTables, setUserAvailableTables] = useState([]);
 
-
-
 //   const auth = getAuth();
-  
     const handleLogout = () => {
         console.log("logging out")
         auth.signOut();
@@ -47,9 +40,6 @@ const Admin = () => {
 
     await signInWithEmailAndPassword(auth, email, password)
   };
-
-  
-  
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
        if (user) {
@@ -141,7 +131,10 @@ useEffect(() => {
       (recording) => recording.recording_start_time === selectedRecording
     );
     
-    const allTables = ["chat_gpt_api_results", "stats", "juji_api_data"];
+    const allTables = ["chat_gpt_api_results", "stats", "juji_api_data",
+                      "dim_aeq", "dim_big_five_personality", "im_emotional_balance",
+                       "dim_emotional_intelligance", "dim_home_first_dashboard",
+                       "dim_leadership", "dim_mind_canvas", "dim_personal_brand"];
     const fetchAvailableTables = async () => {
       const tableChecks = allTables.map(async (table) => {
         const q = query(collection(fireStore, table), where("recording_id", "==", recording.recording_id));
