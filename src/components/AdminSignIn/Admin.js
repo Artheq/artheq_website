@@ -132,7 +132,7 @@ useEffect(() => {
     );
     
     const allTables = ["chat_gpt_api_results", "stats", "juji_api_data",
-                      "dim_aeq", "dim_big_five_personality", "im_emotional_balance",
+                      "dim_aeq", "dim_big_five_personality", "dim_emotional_balance",
                        "dim_emotional_intelligance", "dim_home_first_dashboard",
                        "dim_leadership", "dim_mind_canvas", "dim_personal_brand"];
     const fetchAvailableTables = async () => {
