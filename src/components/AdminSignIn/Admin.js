@@ -134,7 +134,7 @@ useEffect(() => {
     const allTables = ["chat_gpt_tone", "stats", "juji_api_data",
                       "dim_aeq", "dim_big_five_personality", "dim_emotional_balance",
                        "dim_emotional_intelligance", "dim_home_first_dashboard",
-                       "dim_leadership", "dim_mind_canvas", "dim_personal_brand"];
+                       "dim_leadership", "dim_mind_canvas", "dim_personal_brand", "dim_ego"];
     const fetchAvailableTables = async () => {
       const tableChecks = allTables.map(async (table) => {
         const q = query(collection(fireStore, table), where("recording_id", "==", recording.recording_id));
